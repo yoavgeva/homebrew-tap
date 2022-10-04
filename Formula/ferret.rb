@@ -9,12 +9,11 @@ class Ferret < Formula
 
 
   def install
-    libexec.install Dir["*"]
-    bin.install_symlink "#{libexec}/bin/app" => "app"
+    bin.install "ferret"
   end
 
+  # Homebrew requires tests.
   test do
-    output = shell_output("#{bin}/app --version")
-    assert_match "1.0.13", output
+    system "#{bin}/ferret version"
   end
 end
