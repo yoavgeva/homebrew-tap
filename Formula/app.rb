@@ -1,4 +1,4 @@
-class App < Formula
+class Ferret < Formula
   desc "Ferret - local pipelines"
   homepage "https://github.com/salesforce/ferret"
   url "https://github.com/yoavgeva/ferret/releases/download/v1.0.13/ferret-1.0.13-osx-x86_64.zip"
