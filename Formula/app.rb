@@ -1,3 +1,4 @@
+# Generated with JReleaser 1.2.0 at 2022-10-04T14:01:16.146216+03:00
 class Ferret < Formula
   desc "Ferret - local pipelines"
   homepage "https://github.com/salesforce/ferret"
@@ -9,7 +10,7 @@ class Ferret < Formula
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink "#{libexec}/bin/app"
+    bin.install_symlink "#{libexec}/bin/app" => "app"
   end
 
   test do
