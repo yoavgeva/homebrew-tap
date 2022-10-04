@@ -9,8 +9,7 @@ class Ferret < Formula
 
 
   def install
-    libexec.install Dir["*"]
-    bin.install_symlink "#{libexec}/bin/app" => "app"
+    bin.install "ferret"
   end
 
   test do
