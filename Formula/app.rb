@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.2.0 at 2022-10-04T14:01:16.146216+03:00
+# Generated with JReleaser 1.2.0 at 2022-10-04T14:03:24.213768+03:00
 class Ferret < Formula
   desc "Ferret - local pipelines"
   homepage "https://github.com/salesforce/ferret"
