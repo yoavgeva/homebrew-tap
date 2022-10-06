@@ -13,7 +13,7 @@ class Ferret < Formula
   end
 
   test do
-    output = shell_output("#{bin}/app --version")
+    output = shell_output("#{bin}/ferret --version")
     assert_match "1.0.13", output
   end
 end
