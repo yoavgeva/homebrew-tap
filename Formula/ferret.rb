@@ -1,19 +1,20 @@
-# Generated with JReleaser 1.2.0 at 2022-10-04T14:03:24.213768+03:00
+# Generated with JReleaser 1.3.1 at 2022-11-06T08:20:25.474689+02:00
 class Ferret < Formula
   desc "Ferret - local pipelines"
   homepage "https://github.com/salesforce/ferret"
-  url "https://github.com/yoavgeva/ferret/releases/download/v1.0.13/ferret-1.0.13-osx-x86_64.tar.gz"
+  url "https://github.com/yoavgeva/ferret/releases/download/v1.0.13/ferret-1.0.13-osx-x86_64.zip"
   version "1.0.13"
-  sha256 "edbfa68f3d041b21fbb6118b746cb87eb2b1dcf99e95756c3c47d11e103d5327"
+  sha256 "608cfbfd75e63b9cd0e10461ace35c6b923df1b06bd5755ff6c1e8453eb7f363"
   license "BSD 3-Clause"
 
 
   def install
-    bin.install "ferret"
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/app" => "app"
   end
 
   test do
-    output = shell_output("#{bin}/ferret --version")
+    output = shell_output("#{bin}/app --version")
     assert_match "1.0.13", output
   end
 end
