@@ -10,11 +10,11 @@ class Ferret < Formula
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink "#{libexec}/bin/app" => "app"
+    bin.install_symlink "#{libexec}/bin/ferret" => "ferret"
   end
 
   test do
-    output = shell_output("#{bin}/app --version")
-    assert_match "1.0.13", output
+    output = shell_output("#{bin}/ferret --version")
+    assert_contains "1.0.12", output
   end
 end
